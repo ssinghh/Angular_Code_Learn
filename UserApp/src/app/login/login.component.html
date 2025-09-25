@@ -1,0 +1,11 @@
+
+<p>{{helloMsg}}</p>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div>
+        <label for="username"> UserName : </label>
+        <input type="text" id="username" name="username" required [(ngModel)]="user.username">
+        <label for="password"> Password : </label>
+        <input type="password" id="password" name="password" required [(ngModel)]="user.password">
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
